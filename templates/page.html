@@ -9,10 +9,10 @@
 <div class="post">
   <h1>{{ page.title | safe }}</h1>
   <div class="post__meta">
-    {% if page.data %}{{page.data | date(format="%Y-%m-%d")}} {% endif %}
+    {% if page.date %}{{page.date | date(format="%Y-%m-%d")}} {% endif %}
   </div>
 
-  <div class="post__body">
+  <div class="post-body">
     {{ page.content | safe }}
   </div>
 </div>

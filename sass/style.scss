@@ -1,0 +1,20 @@
+h1 {
+  color: tomato;
+  background: blueviolet;
+}
+
+.post {
+  border: 1px solid black;
+  width: max-content;
+  height: max-content;
+  color: black;
+
+  &-body {
+    background-color: peachpuff;
+    color: red;
+  }
+  &__meta {
+    background: green;
+  }
+}
+

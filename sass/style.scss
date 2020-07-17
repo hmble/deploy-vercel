@@ -1,5 +1,6 @@
 h1 {
   color: tomato;
+  background: blueviolet;
 }
 
 .post {
@@ -8,8 +9,12 @@ h1 {
   height: max-content;
   color: black;
 
-  &__body {
+  &-body {
     background-color: peachpuff;
     color: red;
   }
+  &__meta {
+    background: green;
+  }
 }
+

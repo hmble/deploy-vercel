@@ -10,7 +10,7 @@ const browsersync = require("browser-sync").create();
 const reload = browsersync.reload;
 
 function css() {
-  const plugins = [autoprefixer({ browsers: ["last 3 version"] }), cssnano()];
+  const plugins = [autoprefixer(), cssnano()];
   return src("sass/**/*.scss")
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(postcss(plugins))
@@ -30,7 +30,7 @@ function html() {
 function watching() {
   browsersync.init({
     server: {
-      baseDir: "./",
+      baseDir: "./public",
     },
     injectChanges: false,
     notify: false,

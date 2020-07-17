@@ -1,0 +1,7 @@
+{
+  "name": "deploy-vercel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Samyak Bakliwal <w3bcode@gmail.com>",
+  "license": "MIT"
+}

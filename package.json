@@ -14,7 +14,7 @@
     "gulp-sass": "^4.1.0"
   },
   "scripts": {
-    "build": "zola build && gulp"
+    "build": "zola build --base-url $VERCEL_URL && gulp"
   },
   "browserslist": [
     "last 3 versions",

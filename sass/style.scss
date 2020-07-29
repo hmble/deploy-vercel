@@ -1,1 +1,53 @@
-@import "_blog";
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  line-height: 2em;
+}
+p > code {
+  padding: 0 5px;
+  background: rgba(peachpuff, 0.5);
+}
+#content {
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+.post-list {
+  width: 700px;
+  & > h2 {
+    margin-top: 1rem;
+  }
+}
+.post__card {
+  width: 400px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  span {
+    font-size: 0.8rem;
+    color: gray;
+  }
+  p {
+    margin-top: 0.5rem;
+  }
+  margin-top: 0.5rem;
+}
+.post-body {
+  width: 700px;
+}
+pre {
+  width: 600px;
+  margin-top: 1rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+}

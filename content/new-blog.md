@@ -1,10 +1,19 @@
 +++
-title = "New blog to test"
-description = "New blog test"
+title = "How to use unix util rename to rename filenames"
+description = "We can use rename to edit multiple filenames at once"
 date = 2020-07-14
 +++
 
+Linux have a cool utility to rename filenames known as `rename`. Let's see how
+we can rename bunch of files at once.
 
-This is a new blog test for zola.
+`rename <expression> <replacement> file`
 
-Add lline to check for autoreload
+In order to change extension of all our `.htm` files to `.html` we use rename as
+
+`rename .htm .html *.htm`
+
+
+```javascript
+const java = require('java');
+```

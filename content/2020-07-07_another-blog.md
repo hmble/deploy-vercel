@@ -1,6 +1,6 @@
 +++
 title = "Blog with no date"
-description = "New blog test"
+description = "Discription we want"
 +++
 
 This blog contains date in its filename.

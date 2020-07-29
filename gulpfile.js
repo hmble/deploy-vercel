@@ -15,12 +15,12 @@ function css() {
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(postcss(plugins))
     .pipe(rename({ suffix: ".min" }))
-    .pipe(dest("./public"))
+    .pipe(dest("public"))
     .pipe(reload({ stream: true }));
 }
 
 function html() {
-  return src("public/**/*.html").pipe(
+  return src("public/new-blog/index.html").pipe(
     reload({
       stream: true,
     })
@@ -30,7 +30,7 @@ function html() {
 function watching() {
   browsersync.init({
     server: {
-      baseDir: "./public",
+      baseDir: "public/",
     },
     injectChanges: false,
     notify: false,

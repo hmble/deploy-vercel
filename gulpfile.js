@@ -15,7 +15,7 @@ function css() {
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(postcss(plugins))
     .pipe(rename({ suffix: ".min" }))
-    .pipe(dest("public"))
+    .pipe(dest("./public"))
     .pipe(reload({ stream: true }));
 }
 

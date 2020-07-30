@@ -12,8 +12,20 @@
     {% if page.date %}{{page.date | date(format="%Y-%m-%d")}} {% endif %}
   </div>
 
+  {% if page.taxonomies.tags %}
+  <ul>
+  {% for tag in page.taxonomies.tags %}
+  <li>
+    <a href="{{get_taxonomy_url(kind="tags", name=tag) | safe}}">{{tag}}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+<p>Content body starts</p>
+{% endif %}
   <div class="post-body">
     {{ page.content | safe }}
   </div>
 </div>
+
 {% endblock content %}

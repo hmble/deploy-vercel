@@ -10,5 +10,11 @@ To comile sass with gulp follow the following steps
 
 Desgin commit
 
-First prototype with all tags and list on front page.
+- First prototype with all tags and list on front page.
 54b676a711fe7
+
+- Copy to clipboard functionality
+
+0436427d11f2cc
+
+[Reference](https://www.dannyguo.com/blog/how-to-add-copy-to-clipboard-buttons-to-code-blocks-in-hugo/)

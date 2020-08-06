@@ -15,7 +15,7 @@ taxonomies = [
 [slugify]
 paths = "on"
 taxonomies = "on"
-anchors = "off"
+anchors = "on"
 
 [extra]
 # Put all your custom variables here

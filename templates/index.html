@@ -1,12 +1,11 @@
 {% extends "base.html" %} {% block body %}
-<header><h1>BSYDE</h1></header>
 <main>
   <section>
     {% for month, posts in section.pages | group_by(attribute="month")%} 
     {% for post in posts %}
     <div class="post__card">
       <h2>{{ post.title }}</h2>
-      <span>
+      <span class="post__meta">
         {% if post.date %} {{post.date | date(format="%Y-%m-%d")}} {% endif %}
       </span>
         {% if post.taxonomies.tags %}
@@ -23,6 +22,11 @@
 
       </ul> 
         {% endif %}
+
+        <div class="read-more">
+          <a href="{{post.permalink}}">Read More</a>
+
+        </div>
     </div>
     {% endfor %} {% endfor %}
   </section>

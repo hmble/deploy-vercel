@@ -1,20 +1,17 @@
 {% extends "base.html"%} 
 
-{% block main %}
-{% block description %}
-{{ page.description }}
-{% endblock description %} 
+{% block body %}
 
 {% block content%}
 
 <div class="post">
   <h1>{{ page.title | safe }}</h1>
-  <div class="post__meta">
+  <span class="post__meta">
     {% if page.date %}{{page.date | date(format="%Y-%m-%d")}} {% endif %}
-  </div>
+  </span>
 
   {% if page.taxonomies.tags %}
-  <ul>
+  <ul class="post__tags">
   {% for tag in page.taxonomies.tags %}
   <li>
     <a href="{{get_taxonomy_url(kind="tags", name=tag) | safe}}">{{tag}}</a>
@@ -22,9 +19,8 @@
   {% endfor %}
 </ul>
 
-<p>Content body starts</p>
 {% endif %}
-  <div class="post-body">
+  <div class="post__body">
     {{ page.content | safe }}
   </div>
 </div>

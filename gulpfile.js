@@ -20,7 +20,7 @@ function css() {
 }
 
 function html() {
-  return src("public/index.html").pipe(
+  return src("public/new-blog/index.html").pipe(
     reload({
       stream: true,
     })

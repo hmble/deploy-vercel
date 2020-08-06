@@ -16,7 +16,7 @@
   "scripts": {
     "build": "zola build && gulp",
     "zola:dev": "zola serve --watch-only --port 3000",
-    "gulp:dev": "gulp watch"
+    "gulp:dev": "gulp && gulp watch"
   },
   "browserslist": [
     "last 3 versions",

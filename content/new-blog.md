@@ -1,28 +1,22 @@
 +++
-title = "How to use unix util rename to rename filenames"
+title = "How to use rename unix utility"
 description = "We can use rename to edit multiple filenames at once"
 date = 2020-07-14
 [taxonomies]
-tags = ["vim", "rust"]
+tags = ["cli"]
 +++
 
 Linux have a cool utility to rename filenames known as `rename`. Let's see how
 we can rename bunch of files at once.
 
 
-{% clicommand() %}
-`rename <expression> <replacement> file`
-{% end %}
-
+```bash
+rename <expression> <replacement> file
+```
 In order to change extension of all our `.htm` files to `.html` we use rename as
 
-{% clicommand() %}
-`rename .htm .html *.htm`
-{% end %}
-
-```javascript
-const java = require('java');
+```bash
+rename .htm .html *.htm
 ```
-
 ## Note
 For more information see man page

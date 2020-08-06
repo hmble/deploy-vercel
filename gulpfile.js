@@ -20,7 +20,7 @@ function css() {
 }
 
 function html() {
-  return src("public/new-blog/index.html").pipe(
+  return src("public/index.html").pipe(
     reload({
       stream: true,
     })
@@ -36,7 +36,7 @@ function watching() {
     notify: false,
   });
   watch("sass/**/*.scss", parallel(css));
-  watch("public/**/*.html", parallel(html));
+  watch("public/index.html", parallel(html));
 }
 
 exports.css = css;

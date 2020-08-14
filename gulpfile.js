@@ -36,7 +36,7 @@ function watching() {
     notify: false,
   });
   watch("sass/**/*.scss", parallel(css));
-  watch("public/**/*.html", parallel(html));
+  watch("public/index.html", parallel(html));
 }
 
 exports.css = css;

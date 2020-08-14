@@ -1,10 +1,17 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block body %}
 
-{% block main %}
+<section>
+  <h2>{{ term.name }}</h2>
+</section>
 
 {% for page in term.pages %}
+<div class="post__card">
+  <h2>
+    <a href="{{ page.permalink }}">{{ page.title }}</a>
+  </h2>
+  <span class="post__meta">
+    {% if page.date %} {{page.date | date(format="%Y-%m-%d")}} {% endif %}
+  </span>
+</div>
 
-<h1>{{page.title}}</h1>
-{% endfor %}
-
-{% endblock main %}
+{% endfor %} {% endblock %}

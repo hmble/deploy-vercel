@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100vw;
+}
 header {
   margin: 1em;
   margin-left: 2em;
@@ -81,6 +84,10 @@ a {
   width: max-content;
   background: rgba(blue, 0.4);
   margin-top: 1em;
+}
+
+pre {
+  overflow: auto;
 }
 // pre {
 //   padding: 10px;

@@ -21,3 +21,6 @@ Desgin commit
 
 - Taxonomy works
 e42659f6646bf07b2
+
+- Prism shortcode works
+28f89526709b5

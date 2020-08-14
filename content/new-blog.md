@@ -18,5 +18,28 @@ In order to change extension of all our `.htm` files to `.html` we use rename as
 ```bash
 rename .htm .html *.htm
 ```
+
+{% prism(lang="diff-js diff-highlight") %}
+-  async function new(one, two) {
+-    console.log("Hello world")
+-  }
+
+
++  async function another(one, two) {
++    console.log("Hello Samyak")
++  }
+{% end %}
+
+
+
 ## Note
 For more information see man page
+
+
+
+{% prism(lang="js", number=true) %}
+console.log("another won")
+console.log("another won")
+console.log("another won")
+console.log("another won")
+{% end %}

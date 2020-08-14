@@ -18,3 +18,6 @@ Desgin commit
 0436427d11f2cc
 
 [Reference](https://www.dannyguo.com/blog/how-to-add-copy-to-clipboard-buttons-to-code-blocks-in-hugo/)
+
+- Taxonomy works
+e42659f6646bf07b2

@@ -1,17 +1,16 @@
-{% extends "base.html" %} {% block body %}
-
-<section>
-  <h2>{{ term.name }}</h2>
-</section>
-
-{% for page in term.pages %}
-<div class="post__card">
-  <h2>
-    <a href="{{ page.permalink }}">{{ page.title }}</a>
-  </h2>
-  <span class="post__meta">
-    {% if page.date %} {{page.date | date(format="%Y-%m-%d")}} {% endif %}
-  </span>
-</div>
-
-{% endfor %} {% endblock %}
+{% extends "base.html" %}
+{% block body %}
+  <section>
+    <h2>{{ term.name }}</h2>
+  </section>
+  {% for page in term.pages %}
+    <div class="post__card">
+      <h2>
+        <a href="{{ page.permalink }}">{{ page.title }}</a>
+      </h2>
+      <span class="post__meta">
+        {% if page.date %} {{page.date | date(format="%Y-%m-%d")}} {% endif %}
+      </span>
+    </div>
+  {% endfor %} 
+{% endblock %}

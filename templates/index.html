@@ -1,29 +1,26 @@
-{% extends "base.html" %} {% block body %}
+{% extends "base.html" %} 
+{% block body %}
 <main>
   <section>
     {% for date, posts in section.pages | group_by(attribute="date")%}
-    {% for post in posts %}
-    <div class="post__card">
-      <h2><a href="{{post.permalink}}">{{ post.title }}</a></h2>
-      <span class="post__meta">
-        {% if post.date %} {{post.date | date(format="%Y-%m-%d")}} {% endif %}
-      </span>
+      {% for post in posts %}
+      <div class="post__card">
+        <h2><a href="{{post.permalink}}">{{ post.title }}</a></h2>
+        <span class="post__meta">
+          {% if post.date %} {{post.date | date(format="%Y-%m-%d")}} {% endif %}
+        </span>
         {% if post.taxonomies.tags %}
-      <ul class="post__tags">
-          {% for tag in post.taxonomies.tags %}
-
-          <li>
-
-    <a href="{{get_taxonomy_url(kind="tags", name=tag) | safe}}">{{tag}}</a>
-          </li>
-
-          {% endfor %}
-
-
-      </ul> 
+          <ul class="post__tags">
+              {% for tag in post.taxonomies.tags %}
+                <li>
+                  <a href="{{get_taxonomy_url(kind="tags", name=tag) | safe}}">{{tag}}</a>
+                </li>
+              {% endfor %}
+          </ul> 
         {% endif %}
-    </div>
-    {% endfor %} {% endfor %}
+      </div>
+      {% endfor %} 
+    {% endfor %}
   </section>
 </main>
 {% endblock body %}

@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block body %}
 <main>
   <section>
-    {% for month, posts in section.pages | group_by(attribute="month")%} 
+    {% for date, posts in section.pages | group_by(attribute="date")%}
     {% for post in posts %}
     <div class="post__card">
       <h2><a href="{{post.permalink}}">{{ post.title }}</a></h2>

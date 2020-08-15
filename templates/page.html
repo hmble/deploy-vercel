@@ -1,34 +1,25 @@
 {% import "macros/rc.html" as rc %}
 {% extends "base.html"%} 
-
 {% block body %}
-
-{% block content%}
-
-<div class="post">
-  <h1>{{ page.title | safe }}</h1>
-  <span class="post__meta">
-    {% if page.date %}{{page.date | date(format="%Y-%m-%d")}} {% endif %}
-  </span>
-
-  {% if page.taxonomies.tags %}
-  <ul class="post__tags">
-  {% for tag in page.taxonomies.tags %}
-  <li>
-    <a href="{{get_taxonomy_url(kind="tags", name=tag) | safe}}">{{tag}}</a>
-  </li>
-  {% endfor %}
-</ul>
-
-{% endif %}
-  <div class="post__body">
-    {{ page.content | safe }}
-  </div>
-
-
-{{rc::rc(path="_index.md", page=page)}}
-</div>
-
-
-{% endblock content %}
+  {% block content%}
+    <div class="post">
+      <h1>{{ page.title | safe }}</h1>
+      <span class="post__meta">
+        {% if page.date %}{{page.date | date(format="%Y-%m-%d")}} {% endif %}
+      </span>
+      {% if page.taxonomies.tags %}
+        <ul class="post__tags">
+        {% for tag in page.taxonomies.tags %}
+          <li>
+            <a href="{{get_taxonomy_url(kind="tags", name=tag) | safe}}">{{tag}}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+      <div class="post__body">
+        {{ page.content | safe }}
+      </div>
+      {{rc::rc(path="_index.md", page=page)}}
+    </div>
+  {% endblock content %}
 {% endblock body %}

@@ -1,7 +1,8 @@
 +++
-title = "How to use rename unix utility"
+title = "How to use rename unix utility lanl sdf sklfyy iofujl lskdfutlksfit lksdjdu"
 description = "We can use rename to edit multiple filenames at once"
 date = 2020-05-14
-[taxonomies]
-tags = ["cli"]
+
+[extra]
+tag = "Js"
 +++

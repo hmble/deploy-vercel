@@ -9,13 +9,10 @@ compile_sass = false
 highlight_code = true
 highlight_theme = "gruvbox-dark"
 
-taxonomies = [
-{name="tags", paginate_by = 5},
-]
 [slugify]
 paths = "on"
-taxonomies = "on"
-anchors = "on"
+taxonomies = "off"
+anchors = "off"
 
 [extra]
 # Put all your custom variables here

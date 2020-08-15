@@ -3,31 +3,28 @@
   {% set path = path %}
   {% set section = get_section(path=path) %}
 
-<section>
-  {% for rd, posts in section.pages | group_by(attribute="date")%}
-  {% for post in posts %}
-  {% if post.permalink != page.permalink %}
-  <div class="post__card">
-    <h2><a href="{{post.permalink}}">{{ post.title }}</a></h2>
-    <span class="post__meta">
-      {% if post.date %} {{post.date | date(format="%Y-%m-%d")}} {% endif %}
-    </span>
-      {% if post.taxonomies.tags %}
-    <ul class="post__tags">
-        {% for tag in post.taxonomies.tags %}
-
-        <li>
-
-  <a href="{{get_taxonomy_url(kind="tags", name=tag) | safe}}">{{tag}}</a>
-        </li>
-
-        {% endfor %}
-
-    </ul>
+  <section>
+    {% for date, posts in section.pages | group_by(attribute="date")%} 
+      {% for post in posts %}
+      {% if post.permalink != page.permalink and loop.index <= 5 %}
+        <div class="post__card">
+          <div class="left">
+            <h2>
+              <a href="{{ post.permalink }}">{{ post.title }}</a>
+            </h2>
+            <span class="post__meta">
+              {% if post.date %} {{post.date | date(format="%Y-%m-%d")}} {% endif %}
+            </span>
+          </div>
+          {% if post.extra.tag %}
+          <div class="right">
+            <h2>{{post.extra.tag}}</h2>
+          </div>
+          {% endif %}
+        </div>
       {% endif %}
-  </div>
-  {% endif %}
-  {% endfor %}  {% endfor %}
-</section>
+      {% endfor %} 
+    {% endfor %}
+  </section>
 </div>
  {% endmacro rc %}

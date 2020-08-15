@@ -4,18 +4,13 @@
   {% block content%}
     <div class="post">
       <h1>{{ page.title | safe }}</h1>
-      <span class="post__meta">
-        {% if page.date %}{{page.date | date(format="%Y-%m-%d")}} {% endif %}
-      </span>
-      {% if page.taxonomies.tags %}
-        <ul class="post__tags">
-        {% for tag in page.taxonomies.tags %}
-          <li>
-            <a href="{{get_taxonomy_url(kind="tags", name=tag) | safe}}">{{tag}}</a>
-          </li>
-        {% endfor %}
-        </ul>
+      <div class="post__meta">
+        {% if page.date %}<span>{{page.date | date(format="%Y-%m-%d")}} </span>{% endif %}
+      {% if page.extra.tag %}
+        <span>{{page.extra.tag}}</span>
       {% endif %}
+      </div>
+
       <div class="post__body">
         {{ page.content | safe }}
       </div>

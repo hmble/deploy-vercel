@@ -94,7 +94,9 @@ a {
 
 .clicommand {
   padding: 10px;
-  background: rgba(skyblue, 0.4);
+  // background: rgba(skyblue, 0.4);
+  background: #011627;
+  color: #f2f2f2;
   margin: 1em 0;
   border-radius: 7px;
 }
@@ -107,6 +109,7 @@ a {
 }
 
 pre {
+  border-radius: 7px;
   overflow: auto;
 }
 // pre {

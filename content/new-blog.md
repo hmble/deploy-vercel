@@ -8,14 +8,14 @@ Linux have a cool utility to rename filenames known as `rename`. Let's see how
 we can rename bunch of files at once.
 
 
-```bash
+{% clicommand() %}
 rename <expression> <replacement> file
-```
+{% end %}
 In order to change extension of all our `.htm` files to `.html` we use rename as
 
-```bash
+{% prism(lang='bash', prompt=true)  %}
 rename .htm .html *.htm
-```
+{% end %}
 
 {% prism(lang="diff-js diff-highlight") %}
 -  async function new(one, two) {

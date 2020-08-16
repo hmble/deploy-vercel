@@ -10,6 +10,9 @@ body {
   width: 100vw;
   background-color: #f2f2f2;
   color: #262526;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 p {
@@ -22,12 +25,17 @@ header {
   font-size: 1.3rem;
 }
 main {
+  padding: 1rem;
   margin-top: 0;
+  flex: 1;
 }
-main > section {
+main section {
   max-width: 720px;
   margin: 0 auto;
-  padding: 1em;
+}
+
+.categories {
+  margin: 1rem 0;
 }
 
 .post__card {
@@ -92,14 +100,34 @@ a {
   margin-top: 1rem;
 
   h2 {
-    margin-top: 2.1rem;
+    margin-top: 2.4rem;
   }
 
-  & > p {
-    margin-top: 1rem;
+  & > * {
+    margin: 1rem 0;
+  }
+
+  p > code {
+    background-color: rgba(blue, 0.4);
+    padding: 1px 5px;
+    display: inline-block;
+    border-radius: 4px;
+  }
+  a {
+    text-decoration: underline;
+    color: blue;
+  }
+
+  ol {
+    margin-left: 1rem;
   }
 }
 
+.note-block {
+  background: #ffee58;
+  padding: 1rem;
+  border-radius: 10px;
+}
 .clicommand {
   padding: 10px;
   // background: rgba(skyblue, 0.4);
@@ -117,7 +145,7 @@ a {
 }
 
 pre {
-  margin: 1rem 0 !important;
+  // margin: 1rem 0 !important;
   border-radius: 7px;
   overflow: auto;
 
@@ -128,4 +156,11 @@ pre {
 
 .related-content {
   margin-top: 2rem;
+}
+
+footer {
+  margin-top: 2rem;
+  align-self: center;
+  padding: 1rem;
+  justify-self: center;
 }

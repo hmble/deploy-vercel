@@ -4,7 +4,7 @@
   {% set section = get_section(path=path) %}
 
   <section>
-    {% for date, posts in section.pages | group_by(attribute="date")%} 
+    {% for month, posts in section.pages | group_by(attribute="month")%} 
       {% for post in posts %}
       {% if post.permalink != page.permalink and loop.index <= 5 %}
         <div class="post__card">
@@ -13,7 +13,7 @@
               <a href="{{ post.permalink }}">{{ post.title }}</a>
             </h2>
             <span class="post__meta">
-              {% if post.date %} {{post.date | date(format="%Y-%m-%d")}} {% endif %}
+              {% if post.date %} {{post.date | date(format="%v")}} {% endif %}
             </span>
           </div>
           {% if post.extra.tag %}

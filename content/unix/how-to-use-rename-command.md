@@ -4,7 +4,7 @@ description = "We can use rename to edit multiple filenames at once"
 date = 2020-07-14
 
 [extra]
-rc = "_index.md"
+tag = "unix"
 +++
 
 Linux have a cool utility to rename filenames known as `rename`. Let's see how
@@ -20,27 +20,7 @@ In order to change extension of all our `.htm` files to `.html` we use rename as
 $ rename .htm .html *.htm
 {% end %}
 
-{% prism(lang="diff-js diff-highlight") %}
--  async function new(one, two) {
--    console.log("Hello world")
--  }
-
-
-+  async function another(one, two) {
-+    console.log("Hello Samyak")
-+  }
-{% end %}
-
-
 
 ## Note
 For more information see man page
 
-
-
-{% prism(lang="js", number=true) %}
-console.log("another won")
-console.log("another won")
-console.log("another won")
-console.log("another won")
-{% end %}

@@ -24,10 +24,13 @@ header {
 main {
   margin-top: 0;
 }
-main > section {
+main section {
   max-width: 720px;
   margin: 0 auto;
-  padding: 1em;
+}
+
+.categories {
+  margin: 1rem 0;
 }
 
 .post__card {
@@ -92,11 +95,11 @@ a {
   margin-top: 1rem;
 
   h2 {
-    margin-top: 2.1rem;
+    margin-top: 2.4rem;
   }
 
-  & > p {
-    margin-top: 1rem;
+  & > * {
+    margin: 1rem 0;
   }
 }
 
@@ -117,7 +120,7 @@ a {
 }
 
 pre {
-  margin: 1rem 0 !important;
+  // margin: 1rem 0 !important;
   border-radius: 7px;
   overflow: auto;
 

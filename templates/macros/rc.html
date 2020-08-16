@@ -4,7 +4,7 @@
   {% set section = get_section(path=path) %}
 
   <section>
-    {% for date, posts in section.pages | group_by(attribute="date")%} 
+    {% for month, posts in section.pages | group_by(attribute="month")%} 
       {% for post in posts %}
       {% if post.permalink != page.permalink and loop.index <= 5 %}
         <div class="post__card">

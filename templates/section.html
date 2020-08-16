@@ -2,7 +2,7 @@
 {% block body %}
 <main>
   <section>
-    {% for date, posts in section.pages | group_by(attribute="date")%} {% for
+    {% for month, posts in section.pages | group_by(attribute="month")%} {% for
     post in posts %}
     <div class="post__card">
       <div class="left">

@@ -1,29 +1,10 @@
 {% extends "base.html" %} {% block body %}
 <main>
   <section>
-    <h1 class="categories"><a href="{{get_url(path="@/_index.md")}}">Others</a></h1>
-    {% for month, posts in section.pages | group_by(attribute="month")%} 
-      {% for post in posts %}
-        <div class="post__card">
-          <div class="left">
-            <h2>
-              <a href="{{ post.permalink }}">{{ post.title }}</a>
-            </h2>
-            <span class="post__meta">
-              {% if post.date %} {{post.date | date(format="%Y-%m-%d")}} {% endif %}
-            </span>
-          </div>
-          {% if post.extra.tag %}
-          <div class="right">
-            <h2>{{post.extra.tag}}</h2>
-          </div>
-          {% endif %}
-        </div>
-      {% endfor %} 
-    {% endfor %}
 
-    <h1 class="categories"><a href="{{get_url(path="@/unix/_index.md")}}">Unix</a></h1>
     {% set unix = get_section(path="unix/_index.md") %}
+    {% if unix.pages | length > 0 %}
+    <h1 class="categories"><a href="{{get_url(path="@/unix/_index.md")}}">Unix</a></h1>
 
     {% for month, posts in unix.pages | group_by(attribute="month")%} 
       {% for post in posts %}
@@ -33,7 +14,7 @@
               <a href="{{ post.permalink }}">{{ post.title }}</a>
             </h2>
             <span class="post__meta">
-              {% if post.date %} {{post.date | date(format="%Y-%m-%d")}} {% endif %}
+              {% if post.date %} {{post.date | date(format="%v")}} {% endif %}
             </span>
           </div>
           {% if post.extra.tag %}
@@ -44,6 +25,7 @@
         </div>
       {% endfor %} 
     {% endfor %}
+    {% endif %}
   </section>
 </main>
 {% endblock body %}

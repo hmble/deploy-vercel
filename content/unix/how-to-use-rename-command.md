@@ -21,6 +21,4 @@ $ rename .htm .html *.htm
 {% end %}
 
 
-## Note
-For more information see man page
 

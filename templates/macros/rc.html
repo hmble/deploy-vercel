@@ -13,7 +13,7 @@
               <a href="{{ post.permalink }}">{{ post.title }}</a>
             </h2>
             <span class="post__meta">
-              {% if post.date %} {{post.date | date(format="%Y-%m-%d")}} {% endif %}
+              {% if post.date %} {{post.date | date(format="%v")}} {% endif %}
             </span>
           </div>
           {% if post.extra.tag %}

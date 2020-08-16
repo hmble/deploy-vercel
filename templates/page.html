@@ -19,6 +19,8 @@
       {% else %}
       {% set path = page.ancestors | nth(n=0) %}
       {% endif %}
+
+      <h2>Related content</h2>
       {{rc::rc(path=path, page=page)}}
     </div>
   {% endblock content %}

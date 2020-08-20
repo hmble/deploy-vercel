@@ -1,6 +1,4 @@
 name: Merge Schedule
-env:
-  TZ: Asia/Kolkata
 on:
   pull_request:
     types:

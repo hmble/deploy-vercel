@@ -12,7 +12,7 @@ we can rename bunch of files at once.
 
 
 {% clicommand() %}
-rename <expression> <replacement> file
+$ rename <expression> <replacement> file
 {% end %}
 In order to change extension of all our `.htm` files to `.html` we use rename as
 

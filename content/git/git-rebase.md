@@ -4,14 +4,15 @@ description = "Git rebase is usefule for editing commit history"
 date = 2020-08-20
 +++
 **Git interactive rebase**  
+
   `git rebase -i <commit-hash>`
 
 yaha par commit hash hame jo last commit edit karni hai uske parent ka hash rehta
 
 
-  > Use this with caution as this changes history. Don't use in public branch 
-  > It's better to use on local branch to change our commit history before pushing
-  > to remote branch
+  > Use this with caution as this changes history. Don't use in public branch
+  > It's better to use on local branch to change our commit history before
+  > pushing to remote branch
 
 Suppose for example agar hum `git rebase -i HEAD~3` use karte to hame
 `HEAD~3..HEAD` k range ki commit aur all of its branch child (descendants)

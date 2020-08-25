@@ -3,6 +3,7 @@ title =  "How to sign your work in git ?"
 description = "It is important to sign your work in git for security"
 date = 2020-08-20
 +++
+
 ### How to sign your work in git ?
 
 For sigining commits and tags we will use [`gnugpg`](https://www.gnupg.org/download/) 
@@ -28,11 +29,15 @@ For sigining commits and tags we will use [`gnugpg`](https://www.gnupg.org/downl
   ssb   4096R/42B317FD4BA89E7A 2016-03-10
 ```
 
-4. copy gpg keyid to clipboard beginning with `-----BEGIN PGP PUBLIC KEY BLOCK-----` and ending with `-----END PGP PUBLIC KEY BLOCK-----`.
+4. copy gpg keyid to clipboard beginning with 
+`-----BEGIN PGP PUBLIC KEY BLOCK-----` and ending with 
+`-----END PGP PUBLIC KEY BLOCK-----`.
 
   `$gpg --armor --export 3AA5C34371567BD2 | xclip -sel clipboard`
 
- 5. Add gpg key to your github account. [Reference](https://help.github.com/en/github/authenticating-to-github/adding-a-new-gpg-key-to-your-github-account)
+ 5. Add gpg key to your github account. [Reference][1]
 
 
 [Source](https://help.github.com/en/github/authenticating-to-github/managing-commit-signature-verification) 
+
+[1]: https://help.github.com/en/github/authenticating-to-github/adding-a-new-gpg-key-to-your-github-account

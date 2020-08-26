@@ -107,6 +107,11 @@ a {
   margin: 0 auto;
   padding: 0 1rem;
 }
+@media (max-width: 720px) {
+  .post {
+    max-width: 95%;
+  }
+}
 
 .post__body {
   margin-top: 1rem;
@@ -133,8 +138,20 @@ a {
   ol {
     margin-left: 1rem;
   }
-}
 
+  pre {
+    border-radius: 7px;
+
+    overflow: auto;
+    & + & {
+      margin-top: 1.5rem !important;
+    }
+
+    code {
+      font-family: "Fira Mono", monospace !important;
+    }
+  }
+}
 .note-block {
   background: #ffee58;
   padding: 1rem;
@@ -142,7 +159,6 @@ a {
 }
 .clicommand {
   padding: 10px;
-  // background: rgba(skyblue, 0.4);
   background: #011627;
   color: #f2f2f2;
   margin: 1rem 0;
@@ -154,19 +170,6 @@ a {
   width: max-content;
   background: rgba(blue, 0.4);
   margin-top: 1rem;
-}
-
-pre {
-  // margin: 1rem 0 !important;
-  border-radius: 7px;
-  overflow: auto;
-  & + & {
-    margin-top: 1.5rem !important;
-  }
-
-  code {
-    font-family: "Fira Mono", monospace !important;
-  }
 }
 
 .related-content {
